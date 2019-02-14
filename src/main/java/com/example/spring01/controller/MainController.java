@@ -26,7 +26,7 @@ public class MainController {
 	@RequestMapping("/")
 	public String main(Model model) {
 		//Model에 자료 저장( ==> Servlet의 Request에 해당)
-		model.addAttribute("message", "홈페이지 방문을 환영합니다. - ParkJongSoo");
+		model.addAttribute("message", "홈페이지 방문을 환영합니다!!. - ParkJongSoo");
 		//main.jsp로 포워딩됨(WEB-INF/views/main.jsp)
 		return "main";
 	}
