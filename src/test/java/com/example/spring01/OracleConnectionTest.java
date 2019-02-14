@@ -13,11 +13,11 @@ public class OracleConnectionTest {
 	
 	private static final String Driver  = "oracle.jdbc.driver.OracleDriver";
 	
-	private static final String URL = "jdbc:oracle:thin:@localhost:1521:orcl";
+	private static final String URL = "jdbc:oracle:thin:@10.10.50.127:1521:sse";
 	
-	private static final String USER = "spring";
+	private static final String USER = "ncis";
 	
-	private static final String PW = "1234";
+	private static final String PW = "ncis";
 
 	@Test // JUnit이 테스트하는 method --> @Test : JUnit이라는 테스트 프로그램이 테스트하게 됨
 	public void test() throws Exception {
