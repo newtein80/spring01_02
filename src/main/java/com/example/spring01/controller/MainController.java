@@ -114,7 +114,7 @@ public class MainController {
 	@RequestMapping("test/doA")
 	public String doA(Model model) {
 		//자료저장
-		model.addAttribute("message", "방문을 환영합니다.");
+		model.addAttribute("message", "방문을 환영합니다.!!!!");
 		//포워딩
 		return "test/doA";
 	}
