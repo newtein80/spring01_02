@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+	
+	<resources mapping="/bower_components/**" location="/resources/bower_components/" />
+	<resources mapping="/plugins/**" location="/resources/plugins/" />
+	<resources mapping="/dist/**" location="/resources/dist/" />
+	<!-- jQuery를 인식하게 하기 위해서 -->
+	<!-- WEB-INF는 접근할 수 없으니 WEB-INF안에 넣는 것을 권장한다!!!(보안문제), ** : 하위디렉토리는 상관하지 않는다.-->
+	<resources location="/WEB-INF/views/include/" mapping="/include/**"/>
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<!-- src/main/java 위치의 com.example.spring01 안의 클래스들을 스프링에서 매핑해서 읽어들인다는 설정, java 클래스 위에 @Controller 를 선언하면 됨-->
+	<!-- 스프링 빈을 태그로 등록하지 않고 자동으로 검색(auto scan) -->
+	<!-- 스프링에서 관리하는 bean(Java의 클래스 인스턴스??)의 기본 디렉토리 -->
+	<context:component-scan base-package="com.example.spring01" />
+	
+	<!--
+	bean을 xml로 등록하는 방법
+	<beans:bean id="참조변수" class="클래스 이름">
+	</beans:bean>
+	
+	Ex.
+	<beans:bean id="homeController" class="com.example.spring01.HomeController">
+	</beans:bean>
+	==> HomeController homeController = new HomeController(); 
+	 -->
+	
+	
+	
+</beans:beans>
