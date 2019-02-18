@@ -11,3 +11,9 @@ https://blog.naver.com/lge920904/220274506449
 https://tutorialzine.com/2017/06/15-essential-plugins-for-visual-studio-code
 
 https://www.youtube.com/watch?v=RJIfsSmU9zk
+
+# 2019.02.18
+
+https://marketplace.visualstudio.com/items?itemName=albert.TabOut
+
+https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode

@@ -5,10 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "Debug (Launch) - Current File",
+            // "type": "java",
+            // "name": "Debug (Launch) - Current File",
+            // "request": "launch",
+            // "mainClass": "${file}"
+            "type": "chrome",
             "request": "launch",
-            "mainClass": "${file}"
+            "name": "Launch Chrome against localhost",
+            "url": "http://127.0.0.1:8080",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
