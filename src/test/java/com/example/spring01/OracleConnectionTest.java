@@ -9,28 +9,28 @@ import org.slf4j.LoggerFactory;
 
 public class OracleConnectionTest {
 	//import org.slf4j.Logger;
-	private static final Logger logger = LoggerFactory.getLogger(OracleConnectionTest.class);
+	// private static final Logger logger = LoggerFactory.getLogger(OracleConnectionTest.class);
 	
-	private static final String Driver  = "oracle.jdbc.driver.OracleDriver";
+	// private static final String Driver  = "oracle.jdbc.driver.OracleDriver";
 	
-	private static final String URL = "jdbc:oracle:thin:@10.10.50.127:1521:sse";
+	// private static final String URL = "jdbc:oracle:thin:@10.10.50.127:1521:sse";
 	
-	private static final String USER = "ncis";
+	// private static final String USER = "ncis";
 	
-	private static final String PW = "ncis";
+	// private static final String PW = "ncis";
 
-	@Test // JUnit이 테스트하는 method --> @Test : JUnit이라는 테스트 프로그램이 테스트하게 됨
-	public void test() throws Exception {
-		//fail("Not yet implemented");
-		Class.forName(Driver);//드라이버 로딩
+	// @Test // JUnit이 테스트하는 method --> @Test : JUnit이라는 테스트 프로그램이 테스트하게 됨
+	// public void test() throws Exception {
+	// 	//fail("Not yet implemented");
+	// 	Class.forName(Driver);//드라이버 로딩
 		
-		try(Connection conn = DriverManager.getConnection(URL, USER, PW)){
-			logger.info("오라클에 연결되었습니다.");
-		}catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
+	// 	try(Connection conn = DriverManager.getConnection(URL, USER, PW)){
+	// 		logger.info("오라클에 연결되었습니다.");
+	// 	}catch (Exception e) {
+	// 		// TODO: handle exception
+	// 		e.printStackTrace();
+	// 	}
 		
-	}
+	// }
 
 }
